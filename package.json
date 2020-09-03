@@ -1,0 +1,48 @@
+{
+  "name": "rate-limiter",
+  "version": "1.0.0",
+  "description": "A challenge project for AirTasker",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "node out/server.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "test": "jest --no-watchman --run-in-band"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0"
+  },
+  "jest": {
+    "automock": false,
+    "rootDir": "src",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "../coverage",
+    "preset": "ts-jest",
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.12",
+    "@types/koa": "^2.11.4",
+    "@types/node": "^14.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  }
+}
